@@ -1,0 +1,23 @@
+<html>
+<head>
+<script type="text/javascript">
+var risType = "flower";
+function resizeRis () {
+var w = document.body.clientWidth;
+document.getElementById("ris").style.width=1*w;
+}
+function changeRis () {
+if (risType == "flower") {
+document.getElementById ("ris").src="r2.png";
+risType = "butterfly";
+} else {
+document.getElementById ("ris").src="r1.png";
+risType = "flower";
+}
+}
+</script>
+</head>
+<body onresize="resizeRis ()" onload="setInterval ('changeRis ()', 2000)">
+<img id="ris" src="r1.png" border="2" ">
+</body>
+</html>
